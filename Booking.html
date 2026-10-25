@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover Movies and Book Tickets">
+    <meta name="keywords" content="movies, tickets, recommendations">
+    <meta name="author" content="Nishith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lumi Reels - Book Tickets</title>
+
+    <link rel="stylesheet" href="style/desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="style/mobile.css" media="screen and (max-width: 767px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1>Find Your Next Movie Night</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="recommend.html">Recommendations</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html" aria-current="page">Book Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Book Your Tickets</h2>
+
+            <p>Complete the form below to reserve your movie tickets.</p>
+
+            
+            <form id="booking-form" method="post"
+                action="http://mercury.swin.edu.au/it000000/cos10005/regtest.php" novalidate>
+
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </p>
+
+                    <p>
+                        <label for="emailaddress">Email Address:</label>
+                        <input type="text" id="emailaddress" name="emailaddress" required>
+                    </p>
+
+                    <p>
+                        <label for="phonenumber">Phone Number:</label>
+                        <input type="text" id="phonenumber" name="phonenumber" required>
+                    </p>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Movies and Screening Details</legend>
+
+                    <p>
+                        <label for="movie">Select Movie:</label>
+
+                        <select id="movie" name="movie" required>
+                            <option value="">Select a Movie</option>
+                            <option value="BeforeSunrise">Before Sunrise</option>
+                            <option value="ET">E.T. the Extra-Terrestrial</option>
+                            <option value="ToyStory">Toy Story</option>
+                            <option value="MysticRiver">Mystic River</option>
+                            <option value="TheGame">The Game</option>
+                            <option value="TheDarkKnight">The Dark Knight</option>
+                            <option value="FightClub">Fight Club</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="screeningdate">Screening Date:</label>
+                        <input type="date" id="screeningdate" name="screeningdate" required>
+                    </p>
+
+                    <p>
+                        <label for="screeningtime">Screening Time:</label>
+                        <input type="time" id="screeningtime" name="screeningtime" required>
+                    </p>
+
+                    <p>
+                        <label for="tickets">Number of Tickets:</label>
+                        <input type="number" id="tickets"  name="tickets" min="1" value="1" required>   </p>
+                    
+
+                    <p>
+                        <label for="tickettype">Ticket Type:</label>
+
+                        <select id="tickettype" name="tickettype" required>
+                            <option value="">Select Ticket Type</option>
+                            <option value="adult">Adult</option>
+                            <option value="child">Child</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="requests">Special Requests (Optional):</label>
+                        <textarea id="requests" name="requests" rows="4"></textarea>  </p>
+                   
+
+                </fieldset>
+
+                <section id="booking-cost">
+
+                    <h3>Booking Cost</h3>
+
+                    <p>Movie ticket price: $<span id="ticketprice">0.00</span></p>
+
+                    <p>Number of tickets: <span id="ticketcount">1</span></p>
+
+                    <p>
+                        <strong>Total Amount: $<span id="totalcost">0.00</span></strong>
+                    </p>
+
+                </section>
+
+                <fieldset>
+                    <legend>Payment Details</legend>
+
+                    <p>Select Payment Method:</p>
+
+                    <p>
+                        <input type="radio" id="online" name="paymentmethod" value="online" checked required>
+                        <label for="online">Online Payment</label>
+                    </p>
+
+                    <p>
+                        <input type="radio" id="voucher" name="paymentmethod"
+                                value="voucher">
+                        <label for="voucher">Voucher</label>
+                    </p>
+
+                    <div id="cardFields">
+
+                        <p>
+                            <label for="cardtype">Card Type:</label>
+                            <select id="cardtype" name="cardtype">
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">Mastercard</option>
+                                <option value="amex">American Express</option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="cardnumber">Card Number:</label>
+
+                            <input type="text" id="cardnumber"
+                                   name="cardnumber" maxlength="16">
+                        </p>
+
+                    </div>
+                    <div id="voucherFields" style="display: none;">
+                        <p>
+                            <label for="vouchercode">Voucher Code:</label>
+                            <input type="text" id="vouchercode"
+                                   name="vouchercode" maxlength="12"> </p>
+                    
+                    </div>
+
+                    <p>
+                        <input type="checkbox" id="sameemail" name="sameemail">
+                        <label for="sameemail">Same as email address</label>
+                    </p>
+
+                    <p>
+                        <label for="billingemail">Billing email Address:</label>
+                        <input type="text" id="billingemail"
+                               name="billingemail" required>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <button type="submit">Confirm Booking</button>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lumi Reels. All rights reserved.</p>
+        <p>Contact us: <a href="contact.html">Contact</a></p>
+    </footer>
+
+</body>
+</html>

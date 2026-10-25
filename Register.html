@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover Movies and Book Tickets">
+    <meta name="keywords" content="movies, tickets, recommendations">
+    <meta name="author" content="Nishith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lumi Reels | Discover Movies and Book Tickets</title>
+
+    <link rel="stylesheet" href="style/desktop.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="style/mobile.css" media="screen and (max-width: 767px)">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <h1>Find Your Next Movie Night</h1>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="recommend.html">Recommendations</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="booking.html">Book Tickets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h2 id="register-title">Create your account</h2>
+            <p>Fill in the form below to register. All fields are required.</p>
+        </section>
+
+        <h2>Registration Details</h2>
+
+        <form id="registerForm" class="form" method="post" novalidate>
+            <fieldset>
+                <legend>Account details</legend>
+
+                 <div class="form-group">
+                    <label for="username">Username<input type="text" id="username" name="username" required></label>
+
+                
+                 </div>
+
+                 <div class="form-group">
+                    <label for="email">Email address<input type="text" id="email" name="email" required></label>
+                 </div>
+
+                 <label for="phonenumber">Phone Number<input type="text" id="phonenumber" name="phonenumber" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Password</legend>
+
+                 <div class="form-group">
+                    <label for="password">Password <input type="password" id="password" name="password" required></label>
+                     
+                 </div>
+
+                 <div class="form-group">
+                    <label for="cpassword">Confirm Password <input type="password" id="cpassword" name="cpassword" required></label>
+                 </div>
+            </fieldset>
+
+            
+            <fieldset class="option-group">
+                <legend>Gender</legend>
+
+                <label>
+                    <input type="radio" id="genf" name="gender" value="female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" id="genm" name="gender" value="male">
+                    Male
+                </label>
+
+            </fieldset>
+
+
+
+                
+                <div class="form-group">
+                    
+                <fieldset class="option-group">
+                    <legend>Preferred Movie Genres (Choose at least one)</legend>
+
+                    <label><input type="checkbox" id="action" name="genres" value="action">Action</label>
+                    <label><input type="checkbox" id="comedy" name="genres" value="comedy">Comedy</label>
+                    <label><input type="checkbox" id="animation" name="genres" value="animation">Animation</label>
+                    <label><input type="checkbox" id="drama" name="genres" value="drama">Drama</label>
+                    <label><input type="checkbox" id="romance" name="genres" value="romance">Romance</label>
+                    <label><input type="checkbox" id="scifi" name="genres" value="sci-fi">Sci-Fi</label>
+
+                </fieldset>
+                    <span id="genres-error" class="error-message" role="alert"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country / region</label>
+                    <select id="country" name="country" aria-describedby="country-error">
+                        <option value="">Select Country</option>
+                        <option value="australia">Australia</option>
+                        <option value="china">China</option>
+                        <option value="india">India</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="new-zealand">New Zealand</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="sri-lanka">Sri Lanka</option>
+                        <option value="united-kingdom">United Kingdom</option>
+                        <option value="united-states">United States</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span id="country-error" class="error-message" role="alert"></span>
+                </div>
+            
+
+
+        
+
+
+
+            <p id="register-success" class="success-message"></p>
+
+            <div class="button-row">
+                <button type="submit" class="btn">Create account</button>
+                <button type="reset" class="btn">Clear form</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lumi Reels. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
